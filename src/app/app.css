@@ -1,0 +1,22 @@
+/* Estilo para los botones del índice */
+.boton-indice {
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #666;
+    background-color: #f0f0f0;
+    font-size: 0.9em;
+    font-family: 'Segoe UI', sans-serif;
+    display: block;
+    box-sizing: border-box; /* evita que el padding los ensanche */
+    white-space: normal;    /* hace que el texto largo salte de línea */
+    transition: background 0.3s; /* Para que cambie de color suave al pasar el ratón */
+}
+
+/* Efecto al pasar el ratón por encima */
+.boton-indice:hover {
+    background-color: #e0e0e0;
+}
