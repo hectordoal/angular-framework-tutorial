@@ -1,6 +1,6 @@
 <div style="display: flex; font-family: 'Segoe UI', sans-serif; min-height: 100vh;">
   
-  <nav style="width: 210px; flex-shrink: 0; background: #80a8ff; color: white; padding: 25px 15px; display: flex; flex-direction: column; align-items: center;">
+  <nav style="width: 210px; flex-shrink: 0; background: #c271ff; color: white; padding: 25px 15px; display: flex; flex-direction: column; align-items: center;">
     <h1 style="font-size: 1.1em; text-align: center; border-bottom: 1px solid white; padding-bottom: 10px;">
       🎓 Tutorial Angular 📖: Desarrollo de aplicaciones en red 🖥️
     </h1>
@@ -17,20 +17,24 @@
   <main style="flex-grow: 1; padding: 40px 5%; background: #f9f9f9; overflow-y: auto;">
     
     <div *ngIf="pasoActual === 0">
-      <h2>Bienvenido</h2>
-      <p>Selecciona un punto del índice a la izquierda para comenzar el tutorial de Angular.</p>
-      <div style="text-align: center; margin: 25px 0;">
-        <img src="logo-angular.png" alt="Logo de Angular" 
-         style="width: 100%; max-width: 700px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        <p style="font-size: 0.8em; color: #666; font-style: italic;">Logo de Angular.</p>
+      <h2>Bienvenido al tutorial de una tecnología/framework</h2>
+      <p>Aprenderemos qué es un framework como Angular y para que sirve en el desarrollo de aplicaciones en red.</p>
+      <p>- <strong>Selecciona</strong> un punto del índice de la izquierda para comenzar el tutorial de Angular.</p>
+      <div style="position: absolute; top: 0; left: 20; width: 100%; height: 100%; 
+              background-image: url('logo-angular.png'); 
+              background-repeat: no-repeat; 
+              background-position: center; 
+              background-size: contain; 
+              opacity: 0.35; 
+                z-index: 0;">
       </div>
-    </div>
+      </div>
 
     <div *ngIf="pasoActual === 1">
       <h2>1. Justificación del Framework</h2>
       <p> Un Framework consiste en un conjunto estandarizado de herramientas y componentes que nos facilita una estructura base o inicial para comenzar a elaborar un proyecto. Podría decirse que es un punto de partida para la organización y desarrollo de un nuevo software.</p>
       <p><strong>A. ¿Para qué sirve?</strong></p>
-      <p>frameworks tienen como finalidad abordar un proyecto en un menor tiempo, y en la programación, además, en un código más claro y más uniforme, ágil y también muy eficiente. El framework proporciona una estructura que los programadores pueden bien complementar o modificar en función de lo que necesitan. El uso de frameworks da como resultado, principalmente, el ahorro de los procesos de desarrollo porque podemos reutilizar módulos o herramientas.</p>
+      <p>Los frameworks tienen como finalidad abordar un proyecto en un menor tiempo, y en la programación, además, en un código más claro, más uniforme, ágil y también muy eficiente. El framework proporciona una estructura que los programadores pueden bien complementar o modificar en función de lo que necesitan. El uso de frameworks da como resultado, principalmente, el ahorro de los procesos de desarrollo porque podemos reutilizar módulos o herramientas.</p>
       <p><strong>B. Angular. ¿En qué consiste?</strong></p>
       <p>Angular es un framework de código de fuente abierta desarrollado por Google basado en TypeScript, orientado a la creación de aplicaciones web SPA (Single Page Application) rápidas, escalables y complejas gracias a su arquitectura basada en componentes que organiza el código en piezas reutilizables. Por tanto, es ideal para proyectos de frontend robustos al mismo tiempo que es compatible con una estructura MVC (Modelo-Vista-Controlador).</p>
       <p><strong>C. ¿Por qué Angular y no otro framework?</strong></p>
@@ -46,7 +50,7 @@
       <p>- Programación reactiva mediante Observables y señales cuando se necesita orquestar asincronía compleja.</p>
       <p>- Gran cantidad de documentación oficial y guías que cubren desde los fundamentos más básicos hasta la performance del framework.</p>
       <p><strong>D. Arquitectura de Angular</strong></p>
-      <p>Angular es un marco modelo-vista-controlador (MVC) completo, proporciona una presupuesto clara de cómo tiene que estructurarse la aplicación, además de proporcionar un flujo de datos bidireccional, además de que ofrece un DOM real.</p>
+      <p>Angular es un marco modelo-vista-controlador (MVC) completo, proporciona una forma clara de cómo tiene que estructurarse la aplicación, además de proporcionar un flujo de datos bidireccional. También ofrece un DOM real.</p>
       <div style="text-align: center; margin: 25px 0;">
         <img src="arquitectura-angular.png" alt="Arquitectura de Angular" 
          style="width: 100%; max-width: 700px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -58,6 +62,31 @@
       <p>Se apoya principalmente en <strong>TypeScript</strong> (una versión mejorada de JavaScript), HTML y CSS.</p>
       <p><strong>G. Prerrequisitos:</strong></p>
       <p>Necesitas tener instalado Node.js y conocer las bases de HTML/JS.</p>
+    </div>
+
+    <div *ngIf="pasoActual === 2">
+      <h2>2. Instalación</h2> 
+      <p><strong>A. ¿Se precisa instalación?</strong></p>
+      <p> Si. A diferencia de una web más sencilla, Angular requiere de un entorno de ejecución llamado Node.js.</p>
+      <p><strong>B. ¿Qué pasos hay que realizar para realizar la instalación?</strong></p>
+      <p>Lo primero de todo es descargarnos el editor de texto, se recomienda Visual Studio Code. Lo podemos descargar en: 
+        <a href="https://code.visualstudio.com/download" target="_blank" style="color: #c271ff; font-weight: bold; text-decoration: underline;">
+        Visual Studio/download </a></p>
+      <p>Una vez ya tengamos instalado Visual Studio, procedemos a descargarnos Node LTS en su versión más actualizada posible ya que así evitaremos problemas futuros relacionados con la versión. Lo podemos descargar en:
+        <a href="https://nodejs.org/es/download//" target="_blank" style="color: #c271ff; font-weight: bold; text-decoration: underline;">
+        Node.js/download </a></p>
+      <p>Despúes de descargarnos e instalarnos todo, abriremos Visual Studio y en el terminal ejecutaremos el comando <strong>npm install -g @angular/cli</strong></p>
+      <p>Podremos verificar que lo tenemos todo listo y actualizado con el comando <strong>ng version</strong></p>
+      <p><strong>C. ¿Rutas para tener en cuenta?</strong></p>
+      <p>Angular funciona bajo el concepto de <strong>SPA (Single Page Application)</strong>. Esto significa que la aplicación nunca recarga el navegador por completo; en su lugar, utiliza una biblioteca oficial de enrutamiento para gestionar la navegación de forma interna. Este sistema se compone de tres pilares fundamentales:</p>
+      <p>- <strong>Las Rutas:</strong> Son objetos de configuración en el código TypeScript donde definimos la relación entre una URL (como <code>/inicio</code>) y el componente que debe mostrarse. Es el "mapa" de la aplicación.</p>
+      <p>- <strong>Los Outlets:</strong> Es una directiva especial (<code>&lt;router-outlet&gt;&lt;/router-outlet&gt;</code>) que actúa como un contenedor dinámico. Es el lugar exacto del HTML donde Angular "inyectará" el componente de la ruta activa.</p>
+      <p>- <strong>Los Enlaces:</strong> En lugar de usar el atributo <code>href</code> tradicional (que recargaría la página), usamos la directiva <code>routerLink</code>. Esto permite que el usuario cambie de vista instantáneamente sin perder el estado de la aplicación.</p>
+      <p><strong>D. ¿Variables de entorno?</strong></p>
+      <p>Las variables de entorno en Angular se gestionan mediante archivos específicos (normalmente en una carpeta llamada <code>environments</code>). Estas son fundamentales porque nos permiten definir configuraciones que cambian según dónde se ejecute la aplicación. Por ejemplo, podemos tener una variable para la dirección de un servidor de pruebas y otra para el servidor real definitivo; Angular se encarga de intercambiarlas automáticamente al compilar el proyecto.</p>
+      <p><strong>F. ¿Necesitas base de datos?</strong></p>
+      <p>Es importante aclarar que Angular, al ser una tecnología de <strong>Frontend</strong> (se ejecuta en el navegador del usuario), no contiene ni requiere una base de datos propia instalada. Para gestionar datos persistentes, Angular se conecta a un <strong>Backend</strong> (un servidor externo) a través de servicios que utilizan el protocolo HTTP. Si necesitamos guardar datos pequeños de forma local para que no se pierdan al cerrar el navegador, podemos utilizar herramientas como el <strong>LocalStorage</strong> o <strong>SessionStorage</strong>.</p>
+
     </div>
 
     </main>
