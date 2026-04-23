@@ -61,7 +61,7 @@
       <p><strong>F. Lenguajes:</strong></p>
       <p>Se apoya principalmente en <strong>TypeScript</strong> (una versión mejorada de JavaScript), HTML y CSS.</p>
       <p><strong>G. Prerrequisitos:</strong></p>
-      <p>Necesitas tener instalado Node.js y conocer las bases de HTML/JS.</p>
+      <p>Necesitas tener instalado un editor de texto, Node.js y conocer las bases de HTML/JS.</p>
     </div>
 
     <div *ngIf="pasoActual === 2">
@@ -86,8 +86,27 @@
       <p>Las variables de entorno en Angular se gestionan mediante archivos específicos (normalmente en una carpeta llamada <code>environments</code>). Estas son fundamentales porque nos permiten definir configuraciones que cambian según dónde se ejecute la aplicación. Por ejemplo, podemos tener una variable para la dirección de un servidor de pruebas y otra para el servidor real definitivo; Angular se encarga de intercambiarlas automáticamente al compilar el proyecto.</p>
       <p><strong>F. ¿Necesitas base de datos?</strong></p>
       <p>Es importante aclarar que Angular, al ser una tecnología de <strong>Frontend</strong> (se ejecuta en el navegador del usuario), no contiene ni requiere una base de datos propia instalada. Para gestionar datos persistentes, Angular se conecta a un <strong>Backend</strong> (un servidor externo) a través de servicios que utilizan el protocolo HTTP. Si necesitamos guardar datos pequeños de forma local para que no se pierdan al cerrar el navegador, podemos utilizar herramientas como el <strong>LocalStorage</strong> o <strong>SessionStorage</strong>.</p>
-
     </div>
 
+    <div *ngIf="pasoActual === 3">
+      <h2>3. Primeros pasos</h2>
+      <p><strong>Cómo realizar una primera aproximación ("Hola mundo")</strong></p>
+      <p>En Angular, todo se construye mediante piezas llamadas <strong>componentes</strong>. Cada componente consta de tres partes principales: el HTML (la estructura), el CSS (el diseño) y el TypeScript (la lógica). Para crear uno nuevo, usamos el comando: <strong>ng generate component nombre-componente</strong></p>
+      <p>Para mostrar datos dinámicos, Angular utiliza la <strong>interpolación</strong>. Esto nos permite "conectar" una variable que hayamos creado en nuestro archivo TypeScript (<code>app.component.ts</code>) directamente con nuestro HTML (<code>app.component.html</code>) usando las dobles llaves.</p>
+      <p>Para esta primera toma de contacto, hemos creado una variable llamada <code>HolaMundo</code> que inicialmente está vacía. Al interactuar con la aplicación, le daremos un valor dinámicamente.</p>
+
+       <p><strong>B. Ejecución del ejemplo</strong></p>
+      <p>Al pulsar el siguiente botón, se ejecutará la función <code>lanzarHolaMundo()</code> de nuestro archivo TypeScript, asignando el texto a la variable y mostrándolo en pantalla mediante <strong>interpolación</strong>:</p>
+
+     <button (click)="lanzarHolaMundo()" style="background: #c271ff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+      Ejecutar Hola Mundo
+     </button>
+
+     <h3 style="color: #000000; margin-top: 20px; min-height: 1.2em;">
+     {{ HolaMundo }}
+     </h3>
+    </div>
+
+    
     </main>
 </div>

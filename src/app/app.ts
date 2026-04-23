@@ -16,4 +16,10 @@ export class AppComponent {
   cambiarPaso(nuevoPaso: number) {
     this.pasoActual = nuevoPaso;
   }
+
+  HolaMundo: string = "";
+
+  lanzarHolaMundo() {
+    this.HolaMundo = "Hola Mundo"
+  }
 }
