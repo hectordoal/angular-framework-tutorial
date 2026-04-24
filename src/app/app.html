@@ -19,7 +19,8 @@
     <div *ngIf="pasoActual === 0">
       <h2>Bienvenido al tutorial de una tecnología/framework</h2>
       <p>Aprenderemos qué es un framework como Angular y para que sirve en el desarrollo de aplicaciones en red.</p>
-      <p>- <strong>Selecciona</strong> un punto del índice de la izquierda para comenzar el tutorial de Angular.</p>
+      <p>El framework de Google fue diseñado para crear aplicaciones web estructuradas, escalables y muy rápidas.</p>
+      <p>- <strong>Seleccione</strong> un punto del índice de la izquierda para comenzar tu aprendizaje.</p>
       <div style="position: absolute; top: 0; left: 20; width: 100%; height: 100%; 
               background-image: url('logo-angular.png'); 
               background-repeat: no-repeat; 
@@ -39,18 +40,20 @@
       <p>Angular es un framework de código de fuente abierta desarrollado por Google basado en TypeScript, orientado a la creación de aplicaciones web SPA (Single Page Application) rápidas, escalables y complejas gracias a su arquitectura basada en componentes que organiza el código en piezas reutilizables. Por tanto, es ideal para proyectos de frontend robustos al mismo tiempo que es compatible con una estructura MVC (Modelo-Vista-Controlador).</p>
       <p><strong>C. ¿Por qué Angular y no otro framework?</strong></p>
       <p>Porque optar por esta solución más que por otras alternativas:</p>
-      <p>- Marco de aplicaciones completo y coherente: ecosistema con componentes, directivas, tuberías, formularios, router e inyección de dependencias.</p>
-      <p>- Escala bien con fondos y código y la mantiene un equipo de Google.</p>
-      <p>- TypeScript de primera clase y una CLI que estandariza el scaffold, las pruebas y los despliegues.</p>
-      <p>- Enrutado oficial para SPA y navegación avanzada.</p>
-      <p>- Formularios reactivos y basados en plantilla con validación nativa.</p>
-      <p>- Soporte de SSR e hidratación para conseguir un mejor SEO y métricas de carga.</p>
-      <p>- Ecosistema maduro y utilidades de testing listas para usar (Jasmine y Karma).</p>
-      <p>- Arquitectura por componentes que hace fácil la mantenibilidad y las reutilizaciones a largo plazo.</p>
-      <p>- Programación reactiva mediante Observables y señales cuando se necesita orquestar asincronía compleja.</p>
-      <p>- Gran cantidad de documentación oficial y guías que cubren desde los fundamentos más básicos hasta la performance del framework.</p>
+      <ul style="line-height: 1.6; margin-bottom: 20px;">
+      <li>Marco de aplicaciones completo y coherente: ecosistema con componentes, directivas, tuberías, formularios, router e inyección de dependencias.</li>
+      <li>Escala bien con fondos y código y la mantiene un equipo de Google.</li>
+      <li>TypeScript de primera clase y una CLI que estandariza el scaffold, las pruebas y los despliegues.</li>
+      <li>Enrutado oficial para SPA y navegación avanzada.</li>
+      <li>Formularios reactivos y basados en plantilla con validación nativa.</li>
+      <li>Soporte de SSR e hidratación para conseguir un mejor SEO y métricas de carga.</li>
+      <li>Ecosistema maduro y utilidades de testing listas para usar (Jasmine y Karma).</li>
+      <li>Arquitectura por componentes que hace fácil la mantenibilidad y las reutilizaciones a largo plazo.</li>
+      <li>Programación reactiva mediante Observables y señales cuando se necesita orquestar asincronía compleja.</li>
+      <li>Gran cantidad de documentación oficial y guías que cubren desde los fundamentos más básicos hasta la performance del framework.</li>
+      </ul>
       <p><strong>D. Arquitectura de Angular</strong></p>
-      <p>Angular es un marco modelo-vista-controlador (MVC) completo, proporciona una forma clara de cómo tiene que estructurarse la aplicación, además de proporcionar un flujo de datos bidireccional. También ofrece un DOM real.</p>
+      <p>Angular es un marco modelo-vista-controlador (MVC) completo, proporciona una forma clara de cómo tiene que estructurarse la aplicación, además de proporcionar un flujo de datos bidireccional. Interactúa con el DOM de forma muy eficiente mediante su motor de detección de cambios, permitiendo una sincronización precisa entre la lógica y la interfaz.</p>
       <div style="text-align: center; margin: 25px 0;">
         <img src="arquitectura-angular.png" alt="Arquitectura de Angular" 
          style="width: 100%; max-width: 700px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -61,7 +64,7 @@
       <p><strong>F. Lenguajes:</strong></p>
       <p>Se apoya principalmente en <strong>TypeScript</strong> (una versión mejorada de JavaScript), HTML y CSS.</p>
       <p><strong>G. Prerrequisitos:</strong></p>
-      <p>Necesitas tener instalado un editor de texto, Node.js y conocer las bases de HTML/JS.</p>
+      <p>Necesitas tener instalado un editor de texto como Visual Studio Code, Node.js instalado en su versión más reciente posible y conocer las bases de desarrollo web.</p>
     </div>
 
     <div *ngIf="pasoActual === 2">
@@ -71,10 +74,10 @@
       <p><strong>B. ¿Qué pasos hay que realizar para realizar la instalación?</strong></p>
       <p>Lo primero de todo es descargarnos el editor de texto, se recomienda Visual Studio Code. Lo podemos descargar en: 
         <a href="https://code.visualstudio.com/download" target="_blank" style="color: #0645AD; font-weight: bold; text-decoration: underline;">
-        Visual Studio/download </a></p>
+        [Visual Studio Code] </a></p>
       <p>Una vez ya tengamos instalado Visual Studio, procedemos a descargarnos Node LTS en su versión más actualizada posible ya que así evitaremos problemas futuros relacionados con la versión. Lo podemos descargar en:
         <a href="https://nodejs.org/es/download//" target="_blank" style="color: #0645AD; font-weight: bold; text-decoration: underline;">
-        Node.js/download </a></p>
+        [Node.js] </a></p>
       <p>Despúes de descargarnos e instalarnos todo, abriremos Visual Studio y en el terminal ejecutaremos el comando <strong>npm install -g @angular/cli</strong></p>
       <p>Podremos verificar que lo tenemos todo listo y actualizado con el comando <strong>ng version</strong></p>
       <p><strong>C. ¿Rutas para tener en cuenta?</strong></p>
@@ -93,9 +96,26 @@
       <p><strong>A. Cómo realizar una primera aproximación ("Hola mundo")</strong></p>
       <p>En Angular, todo se construye mediante llamadas a <strong>componentes</strong>. Cada componente consta de tres partes principales: el HTML (la estructura), el CSS (el diseño) y el TypeScript (la lógica). Para crear uno nuevo, usamos el comando en el terminal: <strong>ng generate component nombre-componente</strong></p>
       <p>Para mostrar datos dinámicos, Angular utiliza la <strong>interpolación</strong>. Esto nos permite "conectar" una variable que hayamos creado en nuestro archivo TypeScript (<code>app.ts</code>) directamente con nuestro HTML (<code>app.html</code>) usando las dobles llaves.</p>
-      <p>Para esta primera toma de contacto, hemos creado una variable llamada <code>HolaMundo</code> que inicialmente está vacía. Al interactuar con la aplicación, le daremos un valor dinámicamente.</p>
+      <p>Para esta primera toma de contacto, hemos creado una variable en el archivo <code>app.ts</code> llamada <code>HolaMundo</code> que inicialmente está vacía. Al interactuar con la aplicación, haremos clic a un botón y le daremos un valor dinámicamente. En este caso un "Hola Mundo".</p>
+      
+      <pre style="background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 8px; overflow-x: auto; font-family: monospace; margin-bottom: 20px;">
+      export class AppComponent &#123;
+        HolaMundo: string = "";
 
-       <p><strong>B. Ejecución del ejemplo</strong></p>
+        lanzarHolaMundo() &#123;
+          this.HolaMundo = "Hola Mundo";
+          &#125;
+      &#125;</pre>
+      
+      <p><strong>B. Realizar la interacción</strong></p>
+      <p>Para que el botón funcione, usamos el <strong>Event Binding</strong> de Angular escribiendo <code>(click)</code> seguido de nuestra función:</p>
+
+      <pre style="background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 8px; overflow-x: auto; font-family: monospace; margin-bottom: 20px;">
+      &lt;button (click)="lanzarHolaMundo()"&gt;
+      Ejecutar Hola Mundo
+      &lt;/button&gt;</pre>
+
+       <p><strong>C. Ejecución del ejemplo</strong></p>
       <p>Al pulsar el siguiente botón, se ejecutará la función <code>lanzarHolaMundo()</code> de nuestro archivo TypeScript, asignando el texto a la variable y mostrándolo en pantalla mediante <strong>interpolación</strong>:</p>
 
      <button (click)="lanzarHolaMundo()" style="background: #c271ff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">
@@ -111,9 +131,9 @@
   <h2>4. Utilización del Framework</h2>
   
   <p><strong>A. ¿Cómo empezar a crear una aplicación base?</strong></p>
-    <p>Para iniciar un proyecto desde cero, utilizamos el comando estrella de la terminal: <code>ng new nombre-de-tu-app</code>. 
+    <p>Para iniciar un proyecto desde cero, utilizamos el siguiente comando en el terminal: <code>ng new nombre-de-tu-app</code>. 
     Al ejecutarlo, el CLI de Angular nos lanzará un asistente que nos preguntará si queremos añadir rutas o qué tipo de hojas de estilo (CSS, SASS) preferimos. Una vez finalizado, se genera automáticamente toda la estructura de carpetas, el archivo <code>package.json</code> con las librerías necesarias y un componente inicial listo para funcionar.</p>
-
+    <p>Una vez generado el proyecto, el trabajo principal se realiza dentro de la carpeta src/app, donde encontraremos el fichero app.html. Este es el archivo principal donde diseñaremos la interfaz de nuestra aplicación base.</p>
   <p><strong>B. ¿Cómo visualizar los resultados de la ejecución?</strong></p>
     <p>Para ver nuestra aplicación en funcionamiento o como la estamos modificando, seguimos estos pasos:</p>
     <ol>
@@ -137,7 +157,7 @@
   <p>Los ficheros no se editan en el mismo servidor, sino en nuestro entorno de desarrollo (Visual Studio). El proceso funciona de la manera siguiente:</p>
   <ul>
     <li>Modificamos el código <strong>TypeScript</strong> (lógica), <strong>HTML</strong> (estructura) o <strong>CSS</strong> (estilo).</li>
-    <li>El compilador de Angular detecta el cambio al guardar y realiza una <strong>Transpilación</strong>.</li>
+    <li>El compilador de Angular detecta el cambio al guardar y realiza una <strong>Transpilación</strong> o <strong>Build</strong>.</li>
     <li>Convierte todo ese código moderno en JavaScript plano para que el navegador pueda ejecutar al momento gracias al <strong>Hot Module Replacement</strong>.</li>
   </ul>
 
@@ -156,10 +176,10 @@
         De esta forma nos acercamos a aprender a como se desarrollan las aplicaciones profesionales.</p>
       <p>Al terminar el recorrido del tutorial hemos podido aprender la capacidad de gestionar proyectos nuevos mediante la interfaz de comandos de angular. La creación de un botón con una función para prácticar la interpolación con interfaces dinámicas. También comprender como Angular gestiona el DOM para evitar constantemente recargas web pidiendole al servidor. Y por último, aprender el flujo de desarrollo con el ciclo de trabajo profesional entre la edición, la transpilación y el Hot Reload.</p>
       <p>Finalmente, Angular es un framework con una capacidad muy alta al transformar lo complejo que es el desarrollo web en un flujo de trabajo más estructurado y eficiente.</p>
+      <div style="text-align: center; margin-top: 30px; padding: 20px; background: #c271ff; color: white; border-radius: 10px;">
+      <h3 style="margin: 0;">¡Enhorabuena! Has completado el tutorial de Angular. ✅</h3>
+      </div>
     </div>
-
-
-
 
     </main>
 </div>
