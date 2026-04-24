@@ -115,14 +115,14 @@
     Al ejecutarlo, el CLI de Angular nos lanzará un asistente que nos preguntará si queremos añadir rutas o qué tipo de hojas de estilo (CSS, SASS) preferimos. Una vez finalizado, se genera automáticamente toda la estructura de carpetas, el archivo <code>package.json</code> con las librerías necesarias y un componente inicial listo para funcionar.</p>
 
   <p><strong>B. ¿Cómo visualizar los resultados de la ejecución?</strong></p>
-    <p>Para ver nuestra aplicación en funcionamientoo o como la estamos modificando, seguimos estos pasos:</p>
+    <p>Para ver nuestra aplicación en funcionamiento o como la estamos modificando, seguimos estos pasos:</p>
     <ol>
       <li>
-      Abrimos el terminal en la carpeta del proyecto y ejecutamos el comando: <strong>ng serve -o</strong>.</li>
+      Abrimos el terminal en la carpeta del proyecto y ejecutamos el comando: <strong>ng serve</strong>. En cambio, si queremos que abra automaticamente el navegador, utilizaremos el comando: <strong>ng serve -o</strong></li>
       <li>
       Este comando compila la aplicación en memoria y activa un servidor local.</li>
       <li>
-      Hacemos control + clic en el enlace creado en el terminal, o de igual manera, abrimos nuestro navegador y escribimos la dirección: <code style="color: #0645AD; font-weight: bold;">http://localhost:4200</code>.</li>
+      Si lo abrimos automaticamente no hace falta, pero si no, hacemos control + clic en el enlace creado en el terminal, o de igual manera, abrimos nuestro navegador y escribimos la dirección: <code style="color: #0645AD; font-weight: bold;">http://localhost:4200</code>.</li>
     </ol>
     <p> Una de las grandes ventajas es el <em>Live Reloading</em>. Si realizas un cambio en el código y guardas, la web se actualizará automáticamente en el navegador sin que tengas que refrescar manualmente.</p>
     </div>
@@ -144,11 +144,21 @@
   <p><strong>C. ¿Cómo se referencian los ficheros desde otras aplicaciones?</strong></p>
   <p>El sistema de ficheros (componentes) de Angular es cerrado y modular, es decir, sus ficheros (componentes) no hace uso de rutas de ficheros al uso (../carpeta/archivo.js), sino que se hace mediante:</p>
   <ul>
-    <li><strong>Selector:</strong> A partir de una etiqueta propia (ej. ) que podríamos usar en cualquier parte de la web.</li>
+    <li><strong>Selector:</strong> A partir de una etiqueta propia (ej. app-ejemplo) que podríamos usar en cualquier parte de la web.</li>
     <li><strong>Imports:</strong> En las versiones modernas, un componente "invoca" a otro importando la propia clase de aquel en el fichero TypeScript.</li>
     <li><strong>APIs:</strong> Si otra aplicación externa quiere "hablar" con nuestra app de Angular no va a acceder a sus ficheros, sino que se "habla" mediante servicios HTTP/REST o librerías exportadas como Web Components.</li>
   </ul>
-</div>
+    </div>
+
+    <div *ngIf="pasoActual === 6">
+      <h2>6. Conclusiones del tutorial sobre el alcance de este y los objetivos conseguidos al finalizarlo.</h2>
+      <p>Este tutorial es una guía rápida de como empezar en Angular. Desde como preparar el entorno de programación hasta comprender los conceptos básicos de Angular y tener una primera toma de contacto con la arquitectura de componentes. No es solo una guía de instalación, sino que vemos como se comunican la lógica (TypeScript) y la interfaz (HTML).
+        De esta forma nos acercamos a aprender a como se desarrollan las aplicaciones profesionales.</p>
+      <p>Al terminar el recorrido del tutorial hemos podido aprender la capacidad de gestionar proyectos nuevos mediante la interfaz de comandos de angular. La creación de un botón con una función para prácticar la interpolación con interfaces dinámicas. También comprender como Angular gestiona el DOM para evitar constantemente recargas web pidiendole al servidor. Y por último, aprender el flujo de desarrollo con el ciclo de trabajo profesional entre la edición, la transpilación y el Hot Reload.</p>
+      <p>Finalmente, Angular es un framework con una capacidad muy alta al transformar lo complejo que es el desarrollo web en un flujo de trabajo más estructurado y eficiente.</p>
+    </div>
+
+
 
 
     </main>
